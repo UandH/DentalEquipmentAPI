@@ -1,5 +1,5 @@
 {
-  "name": "bookapi",
+  "name": "dentalequipmenmtapi",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/geode76/NodeRestfulAPI.git"
+    "url": "git+https://github.com/TechNinjasFresno/DentalEquipmentAPI.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/geode76/NodeRestfulAPI/issues"
+    "url": "https://github.com/TechNinjasFresno/DentalEquipmentAPI/issues"
   },
-  "homepage": "https://github.com/geode76/NodeRestfulAPI#readme",
+  "homepage": "https://github.com/TechNinjasFresno/DentalEquipmentAPI#readme",
   "dependencies": {
     "body-parser": "^1.17.1",
     "express": "^4.15.2",

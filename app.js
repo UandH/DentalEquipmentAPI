@@ -3,9 +3,8 @@ var express = require('express'),
     bodyParser = require('body-parser');
 
 
-var db = mongoose.connect('mongodb://localhost/bookAPI');
+var db = mongoose.connect('mongodb://localhost/DentalEquipmentAPI');
 
-var Book = require('./models/bookModel');
 var Employee = require('./models/employeeModel');
 var Equipment = require('./models/equipmentModel');
 var Vendor = require('./models/vendorModel');
@@ -33,13 +32,11 @@ app.use(function (req, res, next) {
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
-bookRouter = require('./routes/bookRoutes')(Book);
 employeeRouter = require('./routes/employeeRoutes')(Employee);
 equipmentRouter = require('./routes/equipmentRoutes')(Equipment);
 vendorRouter = require('./routes/vendorRoutes')(Vendor);
 
 
-app.use('/api/books', bookRouter);
 app.use('/api/employees', employeeRouter);
 app.use('/api/equipment', equipmentRouter);
 app.use('/api/vendors', vendorRouter);
