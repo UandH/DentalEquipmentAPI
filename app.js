@@ -7,6 +7,7 @@ var db = mongoose.connect('mongodb://localhost/DentalEquipmentAPI');
 
 var Employee = require('./models/employeeModel');
 var Equipment = require('./models/equipmentModel');
+var EquipModel = require('./models/equipModelModel');
 var EquipRepair = require('./models/equipRepairModel');
 var Vendor = require('./models/vendorModel');
 
@@ -35,12 +36,14 @@ app.use(bodyParser.json());
 
 employeeRouter = require('./routes/employeeRoutes')(Employee);
 equipmentRouter = require('./routes/equipmentRoutes')(Equipment);
+equipModelRouter = require('./routes/equipModelRoutes')(EquipModel);
 equipRepairRouter = require('./routes/equipRepairRoutes')(EquipRepair);
 vendorRouter = require('./routes/vendorRoutes')(Vendor);
 
 
 app.use('/api/employees', employeeRouter);
 app.use('/api/equipment', equipmentRouter);
+app.use('/api/models', equipModelRouter);
 app.use('/api/repairs', equipRepairRouter);
 app.use('/api/vendors', vendorRouter);
 
