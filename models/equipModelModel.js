@@ -3,6 +3,7 @@ var mongoose = require('mongoose'),
 
 var equipModelModel = new Schema({
     modelDescription: {type: String},
+    manufacturer: {type: String},
     type: {type: String} 
 });
 

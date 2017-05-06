@@ -54,6 +54,7 @@ var equipModelController = function(EquipModel){
 
     var update = function(req, res){
             req.equipModel.modelDescription = req.body.modelDescription;
+            req.equipModel.manufacturer = req.body.manufacturer;
             req.equipModel.type = req.body.type;
             req.equipModel.save(function(err){
                 if(err)
